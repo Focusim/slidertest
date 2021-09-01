@@ -1,0 +1,101 @@
+.conteiner {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.slider__inner {
+    padding: 120px 0;
+}
+
+.slider__title {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.slider__text--span {
+    color: #9299A2;
+    font-size: 14px;
+}
+
+.slider__text {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+.slider__blocks {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.slider__block {
+    width: 336px;
+    min-height: 422px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+.slider__block-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.slider__block-img {
+    margin-right: 15px;
+}
+
+.slider__block-text {
+    font-size: 16px;
+    line-height: 24px;
+    width: 276px;
+    text-align: center;
+    margin: 0 auto 10px auto;
+}
+
+.slider__btn-next {
+    width: 51px;
+    height: 51px;
+    border: 1px solid blue;
+    border-radius: 4px;
+    position: absolute;
+    background: transparent;
+    top: 45%;
+    right: 0px;
+    font-size: 21px;
+    font-weight: 800;
+    color: blue;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.slider__btn-next:hover {
+    color: #fff;
+    background: blue;
+}
+
+.slider__btn-prev {
+    width: 51px;
+    height: 51px;
+    border: 1px solid blue;
+    border-radius: 4px;
+    position: absolute;
+    background: transparent;
+    top: 45%;
+    left: 0px;
+    font-size: 21px;
+    font-weight: 800;
+    color: blue;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.slider__btn-prev:hover {
+    color: #fff;
+    background: blue;
+}
