@@ -1,4 +1,3 @@
-
 /* Устанавливаем стартовый индекс слайда по умолчанию: */
 let slideIndex = 3;
 /* Вызываем функцию, которая реализована ниже: */
@@ -52,26 +51,76 @@ function showSlides(n) {
 
 
 
-number = 0
+number0 = 0
+number1 = 1
+number2 = 2
+
+slideView()
+
+//number 0
 function prevTop() {
-    if (number < 5) {
-        number += 1
-    } else {
-        number = 0
+    if (number0 < 1) {
+        number0 = 5
+    } else if (number0 <= 5) {
+        number0 -= 1
+    }
+    if (number1 < 1) {
+        number1 = 5
+    } else if (number1 <= 5) {
+        number1 -= 1
+    }
+    if (number2 < 1) {
+        number2 = 5
+    } else if (number2 <= 5) {
+        number2 -= 1
     }
     slideView()
 }
 
-function slideView(){
-    let slidesTop = document.querySelectorAll(".top")
-    console.log(slidesTop)
-    
-    slidesTop.item(number).style.display = "block"
+function nextTop() {
+    if (number0 < 5) {
+        number0 += 1
+    } else {
+        number0 = 0
+    }
+    if (number1 < 5) {
+        number1 += 1
+    } else {
+        number1 = 0
+    }
+    if (number2 < 5) {
+        number2 += 1
+    } else {
+        number2 = 0
+    }
+    slideView()
+    if (number0 === 3) {
+        let slidesTop = document.querySelectorAll(".top")
+
+        slidesTop.item(1).style.order = "1"
+    }
 }
 
-for (let item of slidesTop){
-    item.style.display="none"
+
+
+
+
+
+
+function slideView() {
+    let slidesTop = document.querySelectorAll(".top")
+    console.log(slidesTop)
+    for (let item of slidesTop) {
+        item.style.display = "none"
+    }
+    slidesTop.item(number0).style.display = "block"
+    slidesTop.item(number1).style.display = "block"
+    slidesTop.item(number2).style.display = "block"
 }
+
+test = 10
+test = test + 10
+console.log(test)
 
 
 
@@ -94,11 +143,11 @@ for (let item of slidesTop){
 
 console.log()
 let user = {
-    name: 'Roman',
-    age: '22',
-    sayHi() {
-        //this - текущий обьект
-        alert(this.name)
+        name: 'Roman',
+        age: '22',
+        sayHi() {
+            //this - текущий обьект
+            alert(this.name)
+        }
     }
-}
-//user.sayHi();
+    //user.sayHi();

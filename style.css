@@ -1,9 +1,9 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-.slider{
+.slider {
     background: cadetblue;
 }
 
@@ -70,11 +70,59 @@ body{
     background: blue;
 }
 
-.top{
+.top {
     font-size: 80px;
     color: rgb(73, 226, 43);
     padding: 100px;
     background: rgb(16, 72, 146);
     width: fit-content;
-    /*display: none;*/
+}
+
+.test__inner {
+    padding: 120px 0;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.mid:nth-child(1) {
+    background: black;
+    order: 1;
+}
+
+.mid:nth-child(2) {
+    background: black;
+    order: 2;
+}
+
+.mid {
+    font-size: 80px;
+    color: rgb(73, 226, 43);
+    padding: 100px;
+    background: rgb(16, 72, 146);
+    width: fit-content;
+}
+
+.order1 {
+    order: 1;
+}
+
+.order2 {
+    order: 2;
+}
+
+.order3 {
+    order: 3;
+}
+
+.order4 {
+    order: 4;
+}
+
+.order5 {
+    order: 5;
+}
+
+.order6 {
+    order: 6;
 }
