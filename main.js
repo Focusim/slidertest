@@ -6,7 +6,7 @@ showSlides(slideIndex);
 
 /* Увеличиваем индекс на 1 — показываем следующий слайд: */
 function nextSlide() {
-    showSlides(slideIndex -= 1);
+    showSlides(slideIndex -= 1)
 }
 
 /* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
@@ -43,39 +43,51 @@ function showSlides(n) {
 }
 
 
-
-let slidetop = 1
-
-function next() {
-    showtop(slideIndex -= 1);
-}
-
-function prev() {
-    showtop(slideIndex += 1);
-}
-
-function currenttop(n) {
-    showtop(slidetop = n);
-}
-
-
-function showtop(n) {
-    let slidesTop = document.querySelectorAll(".top");
-
-    if (n > slidesTop) {
-        slidetop = 3
-    }
-    if (n < 3) {
-        slidetop = slidesTop
-    }
-
-    slidesTop[{key: 1}].style.display = "block";
-    slidesTop[slidetop - 2].style.display = "block";
-    slidesTop[slidetop - 3].style.display = "block";
-    console.log(slidesTop)
-}
-let slidesTop = document.querySelectorAll(".top");
+let slidesTop = document.querySelectorAll(".top")
 console.log(slidesTop)
 
-let btb = slidesTop.length
-console.log(btb)
+//let btb = slidesTop.item(1)
+//slidesTop.item({
+//    nextTop(){
+//       for (i=0; i<6 ; i++){(i)}
+//    }
+//}).style.display="block"
+//slidesTop.item(2).style.display="block"
+//slidesTop.item(3).style.display="block"
+
+
+start = 0
+number = 0
+topSlide()
+
+function nextTop() {
+    topSlide(function () { for (number = 0; number < 6; number++)number; }
+    )
+}
+
+function topSlide() {
+    start = number
+    slidesTop.item(start).style.display = "block"
+}
+
+tes = 0
+function prevTop() {
+    for (tes = 0; tes < 6; ++tes) {
+        alert(tes)
+        slidesTop.item(tes).style.display="block"
+    }
+}
+
+
+
+
+console.log()
+let user = {
+    name: 'Roman',
+    age: '22',
+    sayHi() {
+        //this - текущий обьект
+        alert(this.name)
+    }
+}
+//user.sayHi();
