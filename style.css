@@ -76,5 +76,5 @@ body{
     padding: 100px;
     background: rgb(16, 72, 146);
     width: fit-content;
-    display: none;
+    /*display: none;*/
 }

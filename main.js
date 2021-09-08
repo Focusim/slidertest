@@ -6,12 +6,12 @@ showSlides(slideIndex);
 
 /* Увеличиваем индекс на 1 — показываем следующий слайд: */
 function nextSlide() {
-    showSlides(slideIndex -= 1)
+    showSlides(slideIndex += 1)
 }
 
 /* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
 function previousSlide() {
-    showSlides(slideIndex += 1);
+    showSlides(slideIndex -= 1);
 }
 
 /* Устанавливаем текущий слайд: */
@@ -43,40 +43,51 @@ function showSlides(n) {
 }
 
 
-let slidesTop = document.querySelectorAll(".top")
-console.log(slidesTop)
-
-//let btb = slidesTop.item(1)
-//slidesTop.item({
-//    nextTop(){
-//       for (i=0; i<6 ; i++){(i)}
-//    }
-//}).style.display="block"
-//slidesTop.item(2).style.display="block"
-//slidesTop.item(3).style.display="block"
 
 
-start = 0
+
+
+
+
+
+
+
 number = 0
-topSlide()
-
-function nextTop() {
-    topSlide(function () { for (number = 0; number < 6; number++)number; }
-    )
-}
-
-function topSlide() {
-    start = number
-    slidesTop.item(start).style.display = "block"
-}
-
-tes = 0
 function prevTop() {
-    for (tes = 0; tes < 6; ++tes) {
-        alert(tes)
-        slidesTop.item(tes).style.display="block"
+    if (number < 5) {
+        number += 1
+    } else {
+        number = 0
     }
+    slideView()
 }
+
+function slideView(){
+    let slidesTop = document.querySelectorAll(".top")
+    console.log(slidesTop)
+    
+    slidesTop.item(number).style.display = "block"
+}
+
+for (let item of slidesTop){
+    item.style.display="none"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
