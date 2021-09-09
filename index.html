@@ -10,9 +10,10 @@
 </head>
 
 <body>
-
+    <!-- Слайдер на 1+ блоков, 1 из них виднен-->
     <section class="slider">
         <div class="conteiner">
+            <h1 style="color: red; text-align: center; font-size: 50px;">Слайдер на 1+ блоков, 1 из них виднен</h1>
             <div class="slider__inner">
                 <button class="slider__btn-next" onclick="nextSlide()">></button>
                 <button class="slider__btn-prev" onclick="previousSlide()"><</button>
@@ -44,6 +45,7 @@
     <!-- Слайдер на 6+ блоков, 3 из них видны-->
     <section class="slider">
         <div class="conteiner">
+            <h1 style="color: red; text-align: center; font-size: 50px;">Слайдер на 6+ блоков, 3 из них виднен</h1>
             <div class="slider__inner">
                 <button class="slider__btn-next" onclick="nextTop()">></button>
                 <button class="slider__btn-prev" onclick="prevTop()"><</button>
@@ -89,28 +91,34 @@
     </section>
 
 
-    <section class="test">
-        <div class="test__inner">
-            <div class="mid order">
-                1
-            </div>
-            <div class="mid order">
-                2
-            </div>
-            <div class="mid order">
-                3
-            </div>
-            <div class="mid order">
-                4
-            </div>
-            <div class="mid order">
-                5
-            </div>
-            <div class="mid order">
-                6
+    <section class="slider">
+        <div class="conteiner">
+            <div class="slider__inner">
+                <button class="slider__btn-next" onclick="nextMid()">></button>
+                <button class="slider__btn-prev" onclick="prevMid()"><</button>
+                <div class="mid">
+                    1
+                </div>
+                <div class="mid">
+                    2
+                </div>
+                <div class="mid">
+                    3
+                </div>
+                <div class="mid">
+                    4
+                </div>
+                <div class="mid">
+                    5
+                </div>
+                <div class="mid">
+                    6
+                </div>
             </div>
         </div>
     </section>
+
+<button class="smile-btn" id="smile"><img class="smile" src="images/smile.png" alt=""></button>
 
 
     <script src="main.js"></script>

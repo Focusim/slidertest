@@ -153,3 +153,54 @@ function slideView() {
 }
 
 /*Слайдер на 6+ блоков, 3 из них видны -- конец*/
+
+
+
+
+
+
+midItems = document.querySelectorAll('.mid')
+midItemsAll = midItems.length
+midItemsLast =midItems[midItems.length - 3]
+
+
+console.log(midItemsAll)
+console.log(midItemsLast)
+
+
+
+
+let smile = document.getElementById('smile').onkeydown = function () {
+    let smile = document.getElementById('smile')
+    smile.style.top = '100px'
+}
+
+
+
+console.log(smile)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
