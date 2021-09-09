@@ -75,6 +75,18 @@ function prevTop() {
         number2 -= 1
     }
     slideView()
+    if (number0 === 5) {
+        let slidesTop = document.querySelectorAll(".top")
+        slidesTop.item(0).style.order = "1"
+        slidesTop.item(1).style.order = "1"
+        slidesTop.item(2).style.order = "1"
+    }
+    if (number0 === 2) {
+        let slidesTop = document.querySelectorAll(".top")
+        slidesTop.item(0).style.order = "unset"
+        slidesTop.item(1).style.order = "unset"
+        slidesTop.item(2).style.order = "unset"
+    }
 }
 
 function nextTop() {
@@ -94,11 +106,19 @@ function nextTop() {
         number2 = 0
     }
     slideView()
-    if (number0 === 3) {
+    if (number0 === 4) {
         let slidesTop = document.querySelectorAll(".top")
-
+        slidesTop.item(0).style.order = "1"
         slidesTop.item(1).style.order = "1"
+        slidesTop.item(2).style.order = "1"
     }
+    if (number0 === 1) {
+        let slidesTop = document.querySelectorAll(".top")
+        slidesTop.item(0).style.order = "unset"
+        slidesTop.item(1).style.order = "unset"
+        slidesTop.item(2).style.order = "unset"
+    }
+    console.log(number0) 
 }
 
 
