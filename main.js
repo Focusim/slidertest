@@ -50,9 +50,9 @@ function showSlides(n) {
 
 
 
-/*Слайдер на 6+ блоков, 3 из них видны -- начало*/
+/*Слайдер на 4+ блоков, 3 из них видны -- начало*/
 
-/*Создаём 3 переменных для применения свойст*/
+/*Создаём 3 переменных c "индексами"*/
 number0 = 0
 number1 = 1
 number2 = 2
@@ -63,44 +63,8 @@ slideView()
 /*Пересчитываем блоки слайдера ".top" */
 let slidesTop = document.querySelectorAll(".top")
 
-/*Считаем количество блоков, отнимаем Еденицу для зацикливания перелёстывания слайдов*/
+/*Считаем количество блоков, отнимаем Единицу для зацикливания перелёстывания слайдов*/
 checkSlide = slidesTop.length - 1
-
-/*Функция клика на кнопку "назад"*/
-function prevTop() {
-    /*Минусуем индекс переменным отталкиваясь от их позиций */
-    if (number0 < 1) {
-        number0 = checkSlide
-    } else if (number0 <= checkSlide) {
-        number0 -= 1
-    }
-    if (number1 < 1) {
-        number1 = checkSlide
-    } else if (number1 <= checkSlide) {
-        number1 -= 1
-    }
-    if (number2 < 1) {
-        number2 = checkSlide
-    } else if (number2 <= checkSlide) {
-        number2 -= 1
-    }
-    /*Задаём ордер для правильной номерации блоков при слайде*/
-    if (number0 === checkSlide) {
-        let slidesTop = document.querySelectorAll(".top")
-        slidesTop.item(0).style.order = "1"
-        slidesTop.item(1).style.order = "1"
-        slidesTop.item(2).style.order = "1"
-    }
-    /*Убираем ордер */
-    if (number0 === 2) {
-        let slidesTop = document.querySelectorAll(".top")
-        slidesTop.item(0).style.order = "unset"
-        slidesTop.item(1).style.order = "unset"
-        slidesTop.item(2).style.order = "unset"
-    }
-    /*Вызываем функцию 'видимости' с изменёными индексамы */
-    slideView()
-}
 
 /*Функция клика на кнопку "вперёд"*/
 function nextTop() {
@@ -120,21 +84,50 @@ function nextTop() {
     } else {
         number2 = 0
     }
-    /*Задаём ордер для правильной номерации блоков при слайде*/
-    if (number0 === 4) {
-        let slidesTop = document.querySelectorAll(".top")
+    /*Задаём ордер для "правильной" номерации блоков при слайде*/
+    if (number0 === 3) {
         slidesTop.item(0).style.order = "1"
         slidesTop.item(1).style.order = "1"
-        slidesTop.item(2).style.order = "1"
+    }
+    if (number0 === 2) {
+        slidesTop.item(0).style.order = "1"
+        slidesTop.item(1).style.order = "1"
     }
     /*Убираем ордер */
-    if (number0 === 1) {
-        let slidesTop = document.querySelectorAll(".top")
+    if (number0 === 0) {
         slidesTop.item(0).style.order = "unset"
         slidesTop.item(1).style.order = "unset"
-        slidesTop.item(2).style.order = "unset"
-    } 
+    }
     /*Вызываем функцию 'видимости' с изменёными индексамы */
+    slideView()
+}
+
+/*Функция клика на кнопку "назад"*/
+function prevTop() {
+    if (number0 < 1) {
+        number0 = checkSlide
+        slidesTop.item(0).style.order = "1"
+        slidesTop.item(1).style.order = "1"
+    } else if (number0 <= checkSlide) {
+        number0 -= 1
+    }
+    if (number0 === 2) {
+        slidesTop.item(1).style.order = "unset"
+    }
+    if (number0 === 1) {
+        slidesTop.item(0).style.order = "unset"
+        slidesTop.item(1).style.order = "unset"
+    }
+    if (number1 < 1) {
+        number1 = checkSlide
+    } else if (number1 <= checkSlide) {
+        number1 -= 1
+    }
+    if (number2 < 1) {
+        number2 = checkSlide
+    } else if (number2 <= checkSlide) {
+        number2 -= 1
+    }
     slideView()
 }
 
@@ -152,40 +145,7 @@ function slideView() {
     slidesTop.item(number2).style.display = "block"
 }
 
-/*Слайдер на 6+ блоков, 3 из них видны -- конец*/
-
-
-
-
-
-
-midItems = document.querySelectorAll('.mid')
-midItemsAll = midItems.length
-midItemsLast =midItems[midItems.length - 3]
-
-
-console.log(midItemsAll)
-console.log(midItemsLast)
-
-
-
-
-let smile = document.getElementById('smile').onkeydown = function () {
-    let smile = document.getElementById('smile')
-    smile.style.top = '100px'
-}
-
-
-
-console.log(smile)
-
-
-
-
-
-
-
-
+/*Слайдер на 4+ блоков, 3 из них видны -- конец*/
 
 
 

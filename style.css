@@ -1,8 +1,31 @@
 body {
     margin: 0;
     padding: 0;
-    background: cadetblue;
+    background: conic-gradient(rgb(14, 123, 0), rgb(3, 3, 129));}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: darkorange;
+    animation-name: titletext;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+
 }
+
+@keyframes titletext{
+    0% {
+        filter: hue-rotate(0deg);
+ }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+    100%{
+        filter: hue-rotate(0deg);
+    }
+}
+
 
 .conteiner {
     max-width: 1200px;
@@ -75,42 +98,4 @@ body {
     width: fit-content;
 }
 
-.test__inner {
-    padding: 120px 0;
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-}
 
-.mid:nth-child(1) {
-    background: black;
-    order: 1;
-}
-
-.mid:nth-child(2) {
-    background: black;
-    order: 2;
-}
-
-.mid {
-    font-size: 80px;
-    color: rgb(73, 226, 43);
-    padding: 100px;
-    background: rgb(16, 72, 146);
-    width: fit-content;
-}
-
-.smile{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-}
-
-.smile-btn{
-    background-color: transparent;
-    border: none;
-}
-
-.smile-btn:focus-visible{
-    visibility: hidden;
-}
