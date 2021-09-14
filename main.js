@@ -147,7 +147,35 @@ function slideView() {
 
 /*Слайдер на 4+ блоков, 3 из них видны -- конец*/
 
-
+/*Слайдер на 1 блок
+number0 = 0
+slideView()
+let slidesTop = document.querySelectorAll(".top")
+checkSlide = slidesTop.length - 1
+function nextTop() {
+    if (number0 < checkSlide) {
+        number0 += 1
+    } else {
+        number0 = 0
+    }
+    slideView()
+}
+function prevTop() {
+    if (number0 < 1) {
+        number0 = checkSlide
+    } else if (number0 <= checkSlide) {
+        number0 -= 1
+    }
+    slideView()
+}
+function slideView() {
+    let slidesTop = document.querySelectorAll(".top")
+    for (let item of slidesTop) {
+        item.style.display = "none"
+    }
+    slidesTop.item(number0).style.display = "block"
+}
+Слайдер на 1 блок -- end*/
 
 
 
